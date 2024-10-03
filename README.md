@@ -1,7 +1,5 @@
 # SimpDB
-If you want pre-release version, install python and check latest pre-release.
-This is a first version.
-Check the current release.
+A demo of some sort of social media and mail.
 
 ## If you want to use this program with internet:
 
