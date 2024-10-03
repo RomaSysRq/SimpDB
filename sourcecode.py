@@ -61,7 +61,7 @@ while True:
                     clear()
                     while True:
                         print("Welcome %s!" % ue)
-                        action = input("N - new file, R - read file,\n L - list files , Q - to log out,\nS - for settings\n>")
+                        action = input("N - new file, R - read file,\n L - list files , Q - to log out,\nS - for settings, M - for Rmail\n>")
                         if action == "N":
                             typef = input("P - for public, L - for private, ! for exit:")
                             if typef == "L":
@@ -240,6 +240,11 @@ while True:
                                             continue
                                         else:
                                             p = input("Choose password:")
+                                            mai = input("Enter mailbox name ({name}@rmail.sdb):")
+                                            mail = mai + '@rmail.sdb'
+                                            db.set('m>' + u, mail)
+                                            db.lcreate(mail)
+                                            db.lcreate(mail + "<out")
                                             db.set(u, p)
                                             db.lcreate(ul)
                                             clear()
